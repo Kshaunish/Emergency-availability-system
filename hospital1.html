@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>R.K Lakshmanan Hospital</title>
+        <script src='jquery-3.2.1.min.js'></script>
+    </head>
+    <style>
+        body{
+            background-image: url("photo(11).jpg");
+            opacity: 0.8;
+        }
+        #main_banner{
+            height:200px;
+            width:1360px;
+        }
+        .main_text{
+            color:red;
+            font-size: 250%;
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 80px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #hospital_address{
+            height:408px;
+            width:450px;
+        }
+        #third_text{
+            text-align: center;
+            font-size: 150%;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .second_text{
+            text-align: left;
+            font-size:170%;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #hospital_bed{
+            height:400px;
+            width:250px;
+            float:right;
+            margin-top:-408px;
+            margin-right: 620px;
+        }
+        #fourth_text{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:150%;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        li{
+            font-size: 130%;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            text-align: left;
+        }
+        #Specialities{
+            height:400px;
+            width:250px;
+            float:right;
+            margin-top:-408px;
+            margin-right:320px;
+        }
+        #fifth_text{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:150%;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #contact_us{
+            height:400px;
+            width:250px;
+            float:right;
+            margin-top:-408px;
+            margin-right:40px;
+        }
+        #eighth_text{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:150%;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #submit{
+            height:100px;
+            width:1360px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+        .final{
+            height:50px;
+            width:300px;
+            margin-left:560px;
+            margin-top:30px;
+        }
+    </style>
+    <body>
+        <div id="main_banner">
+            <p class="main_text">R.K Lakshmanan Hospital</p>
+        </div>
+        <div id="hospital_address">
+            <h2 id="third_text"> About the hospital</h2>
+            <p class="second_text">Located near Katpadi, this hospital boasts of the best doctors that can be found in India<br>Established in 1980 under the authority 
+                of the previous chief minister of tamil nadu, this institute has serviced many people since its humble beginning
+            </p>
+        </div>
+        <div id="hospital_bed">
+            <h2 id="fourth_text">Statistic about the hospital</h2>
+            <ol>
+                <li class="change">The number of beds in the hospital are 2000</li>
+                <li class="change2">The number of speciaization available are 12</li>
+                <li class="change3">The number of specialized doctors available are 200 and above</li>
+            </ol>
+        </div>
+        <div id="Specialities">
+            <h2 id="fifth_text"> Specialities available</h2>
+            <ol>
+                <li class="changeto">Cardio-Vascular</li>
+                <li class="changeto1">Neurology</li>
+                <li class="changeto2">Orthopedics</li>
+                
+            </ol>
+        </div>
+        <div id="Contact_Us">
+            <h2 id="eighth_text">Contact Us</h2>
+            <ol>
+                <li class="onepiece">communicate@lakshmanan.ac.in</li>
+                <li class="onepiece1">06782-290811</li>
+                <li class="onepiece2">8790675490</li>
+            </ol>
+        </div>
+        <div id="submit">
+            <input type="submit" value="Register" class="final"></input>
+        </div>
+        <script>
+            $("#hospital_bed").click(function(){
+                $(this).animate({},4000,function(){
+                    $("#fourth_text").html("More statistic");
+                    $(".change").html("The number of ambulances are 150 in number");
+                    $(".change1").html("Greatest number of registered nurses in south India");
+                    $(".change2").html("Greatest Outreach program in south India");
+                })
+            })
+            $("#Specialities").click(function(){
+                $(this).animate({},4000,function(){
+                    $("#fifth_text").html("More specialization");
+                    $(".changeto").html("Dermatology");
+                    $(".changeto1").html("Pediatric");
+                    $(".changeto2").html("Plastic surgery");
+                })
+            })
+            $(".final").click(function(){
+                $("#submit").css("background-color","59f441");
+                $("#submit").css("font-size","250%");
+                $("#submit").css("text-align","center");
+                $("#submit").css("margin-top","10px");
+                $("#submit").html("You have been registered");
+                location.href="http://localhost/php/bed_update.php";
+            })
+        </script>
+    </body>
+</html>
